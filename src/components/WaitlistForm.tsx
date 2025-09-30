@@ -41,15 +41,15 @@ const WaitlistForm = () => {
 
   return (
     <section id="waitlist" className="mt-6">
-      <div className="bg-card rounded-2xl p-8 shadow-blue-glow">
-        <div className="mb-6 text-center">
+      <div className="bg-card rounded-2xl p-6 md:p-8 shadow-blue-glow">
+        <div className="mb-4 md:mb-5 text-center">
           <h3 className="text-xl md:text-2xl font-heading font-bold text-primary">Join the Waitlist</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Be among the first to experience the future of campus collaboration
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
           <div>
             <label htmlFor="email" className="text-sm text-foreground mb-2 block font-medium">
               Email

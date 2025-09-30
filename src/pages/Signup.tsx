@@ -64,8 +64,8 @@ const Signup = () => {
 
       {/* Main Content */}
       <main className="flex-1 pt-24 px-5 flex items-start justify-center min-h-screen">
-        <div className="w-full max-w-md bg-card rounded-2xl p-8" style={{ boxShadow: '0 10px 40px -10px hsl(348 83% 47% / 0.3), 0 4px 20px -4px hsl(348 83% 47% / 0.2)' }}>
-          <div className="mb-8 text-center">
+        <div className="w-full max-w-md bg-card rounded-2xl p-6 md:p-8" style={{ boxShadow: '0 8px 30px -10px hsl(348 83% 47% / 0.15), 0 2px 15px -4px hsl(348 83% 47% / 0.1)' }}>
+          <div className="mb-5 md:mb-6 text-center">
             <h1 className="text-xl md:text-2xl font-heading font-bold text-primary">
               Create your account
             </h1>
@@ -74,7 +74,7 @@ const Signup = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSignupNext} className="space-y-6">
+          <form onSubmit={handleSignupNext} className="space-y-4 md:space-y-5">
             <div>
               <label className="text-sm text-foreground mb-2 block font-medium">Email</label>
               <input
