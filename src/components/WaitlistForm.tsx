@@ -31,7 +31,7 @@ const WaitlistForm = () => {
 
   return (
     <section id="waitlist" className="mt-6">
-      <div className="bg-card rounded-lg p-4 shadow-sm">
+      <div className="bg-card rounded-lg p-4 shadow-blue-subtle">
         <h3 className="text-center text-lg font-heading font-bold">Join the Waitlist</h3>
 
         <form onSubmit={handleSubmit} className="mt-3 space-y-2">

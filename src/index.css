@@ -38,6 +38,8 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
+    --shadow-blue: 240 70% 85%;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -101,5 +103,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  .shadow-blue-subtle {
+    box-shadow: 0 10px 30px -10px hsl(var(--shadow-blue) / 0.4);
   }
 }
