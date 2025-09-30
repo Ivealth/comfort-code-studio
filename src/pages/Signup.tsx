@@ -64,7 +64,7 @@ const Signup = () => {
 
       {/* Main Content */}
       <main className="flex-1 pt-24 px-5 flex items-start justify-center min-h-screen">
-        <div className="w-full max-w-md bg-card rounded-2xl p-8" style={{ boxShadow: '0 10px 40px -10px hsl(330 100% 85% / 0.4), 0 4px 20px -4px hsl(330 100% 75% / 0.2)' }}>
+        <div className="w-full max-w-md bg-card rounded-2xl p-8" style={{ boxShadow: '0 10px 40px -10px hsl(348 83% 47% / 0.3), 0 4px 20px -4px hsl(348 83% 47% / 0.2)' }}>
           <div className="mb-8 text-center">
             <h1 className="text-xl md:text-2xl font-heading font-bold text-primary">
               Create your account

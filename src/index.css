@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    --shadow-black: 0 0% 10%;
+    --shadow-crimson: 348 83% 47%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -106,6 +106,6 @@ All colors MUST be HSL.
   }
 
   .shadow-blue-glow {
-    box-shadow: 0 10px 40px -10px hsl(var(--shadow-black) / 0.15), 0 4px 20px -4px hsl(var(--shadow-black) / 0.1), 0 0 30px hsl(var(--shadow-black) / 0.08);
+    box-shadow: 0 10px 40px -10px hsl(var(--shadow-crimson) / 0.3), 0 4px 20px -4px hsl(var(--shadow-crimson) / 0.2), 0 0 30px hsl(var(--shadow-crimson) / 0.15);
   }
 }
