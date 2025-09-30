@@ -2,37 +2,32 @@ import { useState, FormEvent } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
+const Signin = () => {
   const navigate = useNavigate();
-  const [signupEmail, setSignupEmail] = useState("");
-  const [signupPassword, setSignupPassword] = useState("");
-  const [agreeTerms, setAgreeTerms] = useState(false);
+  const [signinEmail, setSigninEmail] = useState("");
+  const [signinPassword, setSigninPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [signupError, setSignupError] = useState("");
+  const [signinError, setSigninError] = useState("");
 
   const validateEmail = (v: string) => {
     return v.includes('@') && v.includes('.');
   };
 
-  const handleSignupNext = (e: FormEvent) => {
+  const handleSigninSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setSignupError("");
+    setSigninError("");
 
-    if (!validateEmail(signupEmail)) {
-      setSignupError('Please enter a valid email');
+    if (!validateEmail(signinEmail)) {
+      setSigninError('Please enter a valid email');
       return;
     }
-    if (signupPassword.length < 6) {
-      setSignupError('Password must be at least 6 characters');
-      return;
-    }
-    if (!agreeTerms) {
-      setSignupError('Please agree to the terms');
+    if (signinPassword.length < 6) {
+      setSigninError('Password must be at least 6 characters');
       return;
     }
 
     // Demo success
-    setSignupError('');
+    setSigninError('');
     setTimeout(() => {
       navigate('/');
     }, 500);
@@ -48,12 +43,12 @@ const Signup = () => {
             className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
           >
             <ArrowLeft size={20} />
-          <span className="text-sm">Back</span>
-        </button>
+            <span className="text-sm">Back</span>
+          </button>
 
-        <div className="w-6"></div>
+          <div className="w-6"></div>
 
-        <div className="text-lg font-heading text-white flex items-center">
+          <div className="text-lg font-heading text-white flex items-center">
             <span className="font-bold">Trovii</span>
             <span className="ml-1 font-body font-light text-white/90 text-xs tracking-tight">
               studsuit
@@ -67,31 +62,31 @@ const Signup = () => {
         <div className="w-full max-w-md bg-card rounded-2xl p-8" style={{ boxShadow: '0 10px 40px -10px hsl(330 100% 85% / 0.4), 0 4px 20px -4px hsl(330 100% 75% / 0.2)' }}>
           <div className="mb-8 text-center">
             <h1 className="text-xl md:text-2xl font-heading font-bold text-primary">
-              Create your account
+              Welcome back
             </h1>
             <p className="mt-2 text-sm text-muted-foreground">
-              Join Trovii and streamline your workflow
+              Sign in to your Trovii account
             </p>
           </div>
 
-          <form onSubmit={handleSignupNext} className="space-y-6">
+          <form onSubmit={handleSigninSubmit} className="space-y-6">
             <div>
               <label className="text-sm text-foreground mb-2 block font-medium">Email</label>
               <input
-                value={signupEmail}
-                onChange={(e) => setSignupEmail(e.target.value)}
+                value={signinEmail}
+                onChange={(e) => setSigninEmail(e.target.value)}
                 placeholder="you@school.edu"
                 className="w-full text-sm font-body px-4 py-3 rounded-xl border border-input bg-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
               />
             </div>
 
             <div>
-              <label className="text-sm text-foreground mb-2 block font-medium">Create password</label>
+              <label className="text-sm text-foreground mb-2 block font-medium">Password</label>
               <div className="relative">
                 <input
-                  value={signupPassword}
-                  onChange={(e) => setSignupPassword(e.target.value)}
-                  placeholder="At least 6 characters"
+                  value={signinPassword}
+                  onChange={(e) => setSigninPassword(e.target.value)}
+                  placeholder="Enter your password"
                   type={passwordVisible ? 'text' : 'password'}
                   className="w-full text-sm font-body px-4 py-3 rounded-xl border border-input bg-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
@@ -105,33 +100,19 @@ const Signup = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <input
-                id="tos"
-                type="checkbox"
-                checked={agreeTerms}
-                onChange={(e) => setAgreeTerms(e.target.checked)}
-                className="mt-1 accent-green-500"
-              />
-              <label htmlFor="tos" className="text-sm text-foreground">
-                I agree to the{' '}
-                <a href="#" className="text-secondary font-medium hover:underline">
-                  Terms
-                </a>{' '}
-                &{' '}
-                <a href="#" className="text-secondary font-medium hover:underline">
-                  Privacy
-                </a>
-              </label>
+            <div className="flex items-center justify-end">
+              <a href="#" className="text-sm text-secondary font-medium hover:underline">
+                Forgot password?
+              </a>
             </div>
 
-            {signupError && <div className="text-sm text-destructive">{signupError}</div>}
+            {signinError && <div className="text-sm text-destructive">{signinError}</div>}
 
             <button
               type="submit"
               className="w-full py-3 rounded-xl text-primary-foreground bg-primary font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              Create Account
+              Sign In
             </button>
 
             <div className="flex items-center gap-3">
@@ -150,14 +131,14 @@ const Signup = () => {
                 <path fill="#FBBC05" d="M119.2 327.7c-11.8-35.3-11.8-73.6 0-108.9V148.2H27.1C-10 213.1-10 331.2 27.1 396.1l92.1-68.4z"/>
                 <path fill="#EA4335" d="M272 107.7c39.8 0 75.5 13.7 103.5 40.6l77.6-77.6C405.4 24.3 343.5 0 272 0 165 0 72.3 57.7 27.1 148.2l92.1 70.6C140.7 155.6 201 107.7 272 107.7z"/>
               </svg>
-              <span className="font-medium font-body">Sign up with Google</span>
+              <span className="font-medium font-body">Sign in with Google</span>
             </button>
 
             <div className="text-center text-sm">
               <span className="text-muted-foreground">
-                Already have an account?{' '}
-                <a href="/signin" className="text-secondary font-bold hover:underline">
-                  Sign In
+                Don't have an account?{' '}
+                <a href="/signup" className="text-secondary font-bold hover:underline">
+                  Sign Up
                 </a>
               </span>
             </div>
@@ -168,4 +149,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signin;
