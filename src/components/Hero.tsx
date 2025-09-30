@@ -5,7 +5,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="mt-6 bg-card rounded-2xl p-6 shadow-blue-subtle">
+    <section className="mt-6 bg-card rounded-2xl p-6 shadow-blue-glow">
       <div className="text-center">
         <h1 className="text-2xl md:text-4xl font-heading font-bold text-primary leading-tight">
           Streamline Your Team,

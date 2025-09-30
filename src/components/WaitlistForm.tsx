@@ -31,12 +31,17 @@ const WaitlistForm = () => {
 
   return (
     <section id="waitlist" className="mt-6">
-      <div className="bg-card rounded-lg p-4 shadow-blue-subtle">
-        <h3 className="text-center text-lg font-heading font-bold">Join the Waitlist</h3>
+      <div className="bg-card rounded-2xl p-8 shadow-blue-glow">
+        <div className="mb-6 text-center">
+          <h3 className="text-xl md:text-2xl font-heading font-bold text-primary">Join the Waitlist</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Be among the first to experience the future of campus collaboration
+          </p>
+        </div>
 
-        <form onSubmit={handleSubmit} className="mt-3 space-y-2">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="sr-only">
+            <label htmlFor="email" className="text-sm text-foreground mb-2 block font-medium">
               Email
             </label>
             <input
@@ -45,57 +50,55 @@ const WaitlistForm = () => {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your Email *"
-              className="w-full text-sm placeholder:text-muted-foreground px-3 py-2 rounded-lg bg-orange-50 border border-transparent focus:outline-none focus:ring-2 focus:ring-primary/20"
+              placeholder="you@school.edu"
+              className="w-full text-sm font-body px-4 py-3 rounded-xl border border-input bg-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
             />
           </div>
 
           <div>
-            <label htmlFor="university" className="sr-only">
-              University
+            <label htmlFor="university" className="text-sm text-foreground mb-2 block font-medium">
+              University (optional)
             </label>
             <input
               id="university"
               type="text"
               value={university}
               onChange={(e) => setUniversity(e.target.value)}
-              placeholder="Your University (optional)"
-              className="w-full text-sm placeholder:text-muted-foreground px-3 py-2 rounded-lg bg-orange-50 border border-transparent focus:outline-none"
+              placeholder="Your University"
+              className="w-full text-sm font-body px-4 py-3 rounded-xl border border-input bg-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
             />
           </div>
 
           <div>
-            <label htmlFor="pain" className="sr-only">
-              What's your biggest campus headache?
+            <label htmlFor="pain" className="text-sm text-foreground mb-2 block font-medium">
+              What's your biggest campus headache? (optional)
             </label>
             <textarea
               id="pain"
               rows={3}
               value={painPoint}
               onChange={(e) => setPainPoint(e.target.value)}
-              placeholder="What's your biggest campus headache? (optional)"
-              className="w-full text-sm placeholder:text-muted-foreground px-3 py-2 rounded-lg bg-orange-50 border border-transparent focus:outline-none resize-none"
+              placeholder="Tell us what challenges you're facing..."
+              className="w-full text-sm font-body px-4 py-3 rounded-xl border border-input bg-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-none"
             />
           </div>
 
           <div>
             <button
               type="submit"
-              className="w-full py-2.5 rounded-md text-primary-foreground bg-primary font-semibold text-sm hover:opacity-90 transition-opacity"
+              className="w-full py-3 rounded-xl text-primary-foreground bg-primary font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               Sign Me Up
             </button>
           </div>
 
-          <div className="mt-2">
-            <div className="mt-2 text-sm text-center text-muted-foreground">
-              Spots filling fast – only{' '}
-              <span className="font-semibold text-foreground">{spotsLeft}</span> left!
-            </div>
-
-            {error && <div className="mt-1 text-sm text-destructive">{error}</div>}
-            {success && <div className="mt-1 text-sm text-green-600">{success}</div>}
+          <div className="text-sm text-center text-muted-foreground">
+            Spots filling fast – only{' '}
+            <span className="font-semibold text-foreground">{spotsLeft}</span> left!
           </div>
+
+          {error && <div className="text-sm text-destructive text-center">{error}</div>}
+          {success && <div className="text-sm text-green-600 text-center">{success}</div>}
         </form>
       </div>
     </section>

@@ -105,7 +105,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 
-  .shadow-blue-subtle {
-    box-shadow: 0 10px 30px -10px hsl(var(--shadow-blue) / 0.4);
+  .shadow-blue-glow {
+    box-shadow: 0 10px 40px -10px hsl(var(--shadow-blue) / 0.6), 0 4px 20px -4px hsl(var(--shadow-blue) / 0.4), 0 0 30px hsl(var(--shadow-blue) / 0.3);
   }
 }
