@@ -30,7 +30,7 @@ const Header = ({ scrolled, onSignupClick }: HeaderProps) => {
 
   const headerStyle = scrolled
     ? {
-        background: 'rgba(25, 25, 112, 0.55)',
+        background: 'rgba(10, 10, 10, 0.55)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.12)',

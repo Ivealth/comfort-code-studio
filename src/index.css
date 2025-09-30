@@ -20,8 +20,8 @@ All colors MUST be HSL.
     --primary: 220 15% 10%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 330 81% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 51 100% 50%;
+    --secondary-foreground: 0 0% 10%;
 
     --muted: 210 16% 46%;
     --muted-foreground: 215 16% 47%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    --shadow-blue: 200 60% 85%;
+    --shadow-black: 0 0% 10%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -106,6 +106,6 @@ All colors MUST be HSL.
   }
 
   .shadow-blue-glow {
-    box-shadow: 0 10px 40px -10px hsl(var(--shadow-blue) / 0.6), 0 4px 20px -4px hsl(var(--shadow-blue) / 0.4), 0 0 30px hsl(var(--shadow-blue) / 0.3);
+    box-shadow: 0 10px 40px -10px hsl(var(--shadow-black) / 0.15), 0 4px 20px -4px hsl(var(--shadow-black) / 0.1), 0 0 30px hsl(var(--shadow-black) / 0.08);
   }
 }
