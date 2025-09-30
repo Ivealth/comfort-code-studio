@@ -48,17 +48,12 @@ const Signup = () => {
             className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
           >
             <ArrowLeft size={20} />
-            <span className="text-sm">Back</span>
-          </button>
+          <span className="text-sm">Back</span>
+        </button>
 
-          <div className="text-lg font-heading text-white flex items-center">
-            <span className="font-bold">Trovii</span>
-            <span className="ml-1 font-body font-light text-white/90 text-xs tracking-tight">
-              studsuit
-            </span>
-          </div>
+        <div className="w-6"></div>
 
-          <div className="text-lg font-heading text-white flex items-center">
+        <div className="text-lg font-heading text-white flex items-center">
             <span className="font-bold">Trovii</span>
             <span className="ml-1 font-body font-light text-white/90 text-xs tracking-tight">
               studsuit
@@ -68,7 +63,7 @@ const Signup = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 pt-20 px-5 flex items-start justify-center min-h-screen">
+      <main className="flex-1 pt-24 px-5 flex items-start justify-center min-h-screen">
         <div className="w-full max-w-md bg-card rounded-2xl p-8" style={{ boxShadow: '0 10px 40px -10px hsl(330 100% 85% / 0.4), 0 4px 20px -4px hsl(330 100% 75% / 0.2)' }}>
           <div className="mb-8 text-center">
             <h1 className="text-xl md:text-2xl font-heading font-bold text-primary">
