@@ -81,9 +81,9 @@ const Header = ({ scrolled, onSignupClick }: HeaderProps) => {
                 aria-hidden
                 className="transition-all duration-300 hover:scale-110"
               >
-                <line x1="4" y1="7" x2="20" y2="7" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                <line x1="4" y1="12" x2="20" y2="12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                <line x1="4" y1="17" x2="20" y2="17" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="4" y1="7" x2="20" y2="7" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                <line x1="4" y1="12" x2="18" y2="12" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                <line x1="4" y1="17" x2="16" y2="17" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
               </svg>
             </button>
 
