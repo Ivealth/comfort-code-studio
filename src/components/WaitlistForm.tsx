@@ -22,6 +22,16 @@ const WaitlistForm = () => {
       return;
     }
 
+    if (!university.trim()) {
+      setError('Please provide your university.');
+      return;
+    }
+
+    if (!painPoint.trim()) {
+      setError('Please tell us your biggest campus headache.');
+      return;
+    }
+
     setSuccess("Thanks — you're on the list! We'll email you soon.");
     setEmail("");
     setUniversity("");
@@ -57,11 +67,12 @@ const WaitlistForm = () => {
 
           <div>
             <label htmlFor="university" className="text-sm text-foreground mb-2 block font-medium">
-              University (optional)
+              University
             </label>
             <input
               id="university"
               type="text"
+              required
               value={university}
               onChange={(e) => setUniversity(e.target.value)}
               placeholder="Your University"
@@ -71,11 +82,12 @@ const WaitlistForm = () => {
 
           <div>
             <label htmlFor="pain" className="text-sm text-foreground mb-2 block font-medium">
-              What's your biggest campus headache? (optional)
+              What's your biggest campus headache?
             </label>
             <textarea
               id="pain"
               rows={3}
+              required
               value={painPoint}
               onChange={(e) => setPainPoint(e.target.value)}
               placeholder="Tell us what challenges you're facing..."
